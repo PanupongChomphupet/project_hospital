@@ -1,0 +1,79 @@
+.display-flex {
+    display: flex;
+}
+
+.medical-device {
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.medical-device .head-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.medical-device .head-content .title {
+    font-size: 2rem;
+}
+
+.medical-device .head-content .add-data-btn {
+    margin-left: 30px;
+}
+
+.medical-device .search-select {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.medical-device .search-select .search-input {
+    width: 20%;
+}
+
+.medical-device .add-data-btn button {
+    padding: 10px;
+    width: 150px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background: rgb(0, 150, 20);
+    color: white;
+    font-size: 18px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.form-search .btn-show-table {
+    font-weight: 900;
+    font-size: 18px;
+    color: white;
+    width: 150px;
+    background: rgb(0, 150, 20);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 5px 10px 1px #696969;
+}
+
+.form-search .btn-show-table:hover {
+    background: rgb(0, 167, 22);
+}
+
+Table {
+    margin: 20px 0;
+}
+
+
+/* -----------------------------------------EditPopup--------------------------------------------------- */
+
+.form-popup {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
