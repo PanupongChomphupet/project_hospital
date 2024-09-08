@@ -10,6 +10,10 @@
     height: 40px;
     background-color: #2F2F2F;
     color: white;
+    width: 100%;
+    position: fixed;
+    top:0;
+    z-index: 1000;
 }
 
 .logo {
@@ -31,11 +35,14 @@
     background-color: rgb(82, 82, 82);
     width: 260px;
     height: 100vh;
-    /* position: fixed; */
+    position: fixed;
+    top: 40px;
+    left: 0;
+    z-index: 999;
 }
 
 .navbar ul a {
-    width: 250px;
+    width: 258px;
     height: 100px;
     background-color: #2F2F2F;
     display: flex;

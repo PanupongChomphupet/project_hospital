@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import '../css/ActionButton.css'
 import axios from "axios";
 import Swal from 'sweetalert2';
@@ -116,7 +116,7 @@ export default function ActionButton({ itemId }) {
                 axios.delete(`http://localhost:8080/api/deletedata/${itemId}`)
                     .then((res) => {
                         if (res.data) {
-                            Swal.fire("ลบข้อมูลสำเร็จ", "", "success")
+                            Swal.fire("ลบข้อมูลสำเร็จ", "", "success", 1500)
                         }
                         window.location.reload()
                     }).catch(error => {
@@ -203,7 +203,7 @@ export default function ActionButton({ itemId }) {
                                         <input
                                             className="check-pm-cal"
                                             type="checkbox"
-                                            name="pm"
+                                            name="cal"
                                             checked={formdata.cal}
                                             onChange={onChangeform}
                                         />

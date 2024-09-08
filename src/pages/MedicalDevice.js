@@ -26,7 +26,7 @@ export default function MedicalDevice() {
                 const data = result.data
                 data.sort((a, b) => {
                     return a["Department"].toLowerCase().localeCompare(b["Department"].toLowerCase()) ||
-                    a["Equipment ID"].toLowerCase().localeCompare(b["Equipment ID"].toLowerCase())
+                        a["Equipment ID"].toLowerCase().localeCompare(b["Equipment ID"].toLowerCase())
                 })
                 setdevice(data);
             })
@@ -38,29 +38,16 @@ export default function MedicalDevice() {
         setselectOption(selectedOption)
     }
 
-    const options = [
-        { value: 'ER', label: 'ER' },
-        { value: 'OPD', label: 'OPD' },
-        { value: 'PHA', label: 'PHA' }
-    ]
     return (
         <>
             <Header />
+            <Navbar />
             <div className="display-flex">
-                <Navbar />
                 <div className="medical-device">
                     <div className="head-content">
-                        <h2 className="title">Title</h2>
-
+                        <h2 className="title">โรงพยาบาลขอนแก่น อ. เมือง จ. ขอนแก่น</h2>
                     </div>
-                    <div className="search-select">
-                        <Select
-                            placeholder="ค้นหา..."
-                            className='search-input'
-                            isClearable
-                            options={options}
-                            onChange={handleSelectCgange}
-                        />
+                    <div className="add-information">
                         <AddModelPopup />
                     </div>
                     <Table data={device} />
